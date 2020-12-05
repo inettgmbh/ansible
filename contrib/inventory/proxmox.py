@@ -231,7 +231,7 @@ def main():
 
     """ read settings from proxmox.ini file """
 
-    config = ConfigParser.SafeConfigParser()
+    config = ConfigParser.ConfigParser()
     config.read(os.path.dirname(os.path.realpath(__file__)) + '/proxmox.ini')
 
     proxmox_host = config.get('proxmox', 'host')
